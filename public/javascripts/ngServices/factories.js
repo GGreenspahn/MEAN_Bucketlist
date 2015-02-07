@@ -1,5 +1,5 @@
 // Create app factories
-appName.factory('', function($http) {
+appBucket.factory('', function($http) {
           
     // var app = [];
     

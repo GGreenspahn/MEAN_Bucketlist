@@ -3,7 +3,7 @@ var mongoCollection = mongoose.model('');
 
 module.exports = {
     index: function(request, response) {
-        response.render('index',  {});
+        response.render('index',  {title: "BucketList"});
     },
     // // get from mongodb
     // get: function(request, response) {

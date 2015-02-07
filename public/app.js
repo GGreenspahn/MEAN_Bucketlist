@@ -1,14 +1,14 @@
 // Create Angular
-  var appName = angular.module('viewName', ['ngRoute']);
+  var appBucket = angular.module('bucketApp', ['ngRoute']);
 
-  appName.config(function($routeProvider) {
+  appBucket.config(function($routeProvider) {
   $routeProvider
     .when('/', {
+      templateUrl: '/views/partials/home_page.html'
+    })
+    .when('/home_page', {
       templateUrl: '/javascripts/partials/html'
     })
-    // .when('/partialsName', {
-    //   templateUrl: '/javascripts/partials/html'
-    // })
     // .when('/partialsName2', {
     //   templateUrl: '/javascripts/partials/html'
     // })

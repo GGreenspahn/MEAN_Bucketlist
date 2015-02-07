@@ -16,7 +16,7 @@ app.configure(function() {                                  // configuring app
     //app.use(favicon(__dirname + '/public/favicon.ico'));  // uncomment after placing your favicon in /public
 
     app.use(express.static(path.join(__dirname, 'public')));// Look into public folder for any files referenced
-    app.set('views', path.join(__dirname, 'server/views')); // goes to  for your views
+    app.set('views', path.join(__dirname, 'public/views')); // goes to  for your views
     app.set('view engine', 'ejs');                          // use ejs to compile the view
     
 });

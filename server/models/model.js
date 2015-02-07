@@ -4,7 +4,7 @@ var Schema = new mongoose.Schema({
     user_name: String,
     password: String,
     bucket: Array,
-    hidden: Boolean
+   	created_at: { type: Date, default: Date.now }
 });
 
 // Error validation?

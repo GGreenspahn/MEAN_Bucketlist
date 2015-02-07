@@ -1,0 +1,30 @@
+<style type="text/css">
+#user_profile
+{
+	width: 50%;
+}
+</style>
+
+<div id="user_profile">
+	
+	<h2>{{ other_user's profile }} 's Bucket List</h2>
+
+	<fieldset ng-controller="displayDone">
+		
+		<legend>Accomplished</legend>
+	
+		<input type="checkbox" checked disabled ng-repeat="x in bucketDone"> {{ x.creator + ' | ' + x.title + ' - ' + x.description + ' - ' + x.created_at }} 
+		
+	</fieldset>
+
+	<br>
+
+	<fieldset ng-controller="displayPending">
+		
+		<legend>Pending</legend>
+	
+		<input type="checkbox" unchecked disabled ng-repeat="x in bucketDone"> {{ x.creator + ' | ' + x.title + ' - ' + x.description + ' - ' + x.created_at }} 
+		
+	</fieldset>
+
+</div>

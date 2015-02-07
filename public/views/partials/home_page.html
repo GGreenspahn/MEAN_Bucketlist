@@ -1,0 +1,39 @@
+<style type="text/css">
+#user_profile, #otherUsers
+{
+	width: 50%;
+}
+</style>
+
+<div id="user_profile">
+	
+	<h2> Welcome {{ user_name }} !</h2>
+
+	<form ng-controller="add_Item">
+		
+		<input type="text" placeholder="Title" name="title" ng-model="addItemInfo['title']">
+		<input type="text" placeholder="Description" name="description" ng-model="addItemInfo['description']">
+		<select name="other_person" form="addItem" ng-model="addItemInfo['other_user']">
+			<option ng-repeat="user_name in users" value="{{users.user_name}}">
+			</option>
+		</select>
+		<button ng-click="addItem()">Add to list</button>	
+		
+	</form>
+
+	<br>
+
+	<fieldset ng-controller="otherUserList" id="otherUsers">
+		
+		<legend>List of logged users (click to view profile):</legend>
+	
+		<ul>
+			<li ng-repeat="x in users">
+				<a ng-href="http://localhost/#user/{{x.id}}"> {{ x.user_name }} </a>	
+			</li>
+		</ul>
+
+		
+	</fieldset>
+
+</div>
